@@ -24,7 +24,6 @@ contract Owner {
         // * You can validate a condition using the `require(bool condition, string error_message)` function
 
         // ONLY UPDATE ABOVE THIS LINE
-        require(owner == msg.sender, "Only the owner can call this function");
         _;
     }
 
@@ -37,7 +36,6 @@ contract Owner {
         // HINTS:
         // * The owner account is stored in the state variable `owner`
         // * You can update the value of a variable by: `variable_name = new_value;`
-        owner = newOwner;
     }
 
     function updateState() external onlyOwner {
